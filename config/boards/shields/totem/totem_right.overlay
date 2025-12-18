@@ -12,10 +12,39 @@
 
 &kscan0 {
     col-gpios
-        = <&gpio0 10 GPIO_ACTIVE_HIGH>  /* NFC2 */
+        = <&gpio0 10 GPIO_ACTIVE_HIGH>  /* NFC2 */  
         , <&gpio0 9 GPIO_ACTIVE_HIGH>   /* NFC1 */
         , <&xiao_d 6 GPIO_ACTIVE_HIGH>
         , <&xiao_d 5 GPIO_ACTIVE_HIGH>
         , <&xiao_d 4 GPIO_ACTIVE_HIGH>
         ;
+};
+
+
+
+&spi0 {
+    status = "okay";
+    cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
+
+    trackball: trackball@0 {
+        compatible = "pixart,paw3222";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
+
+        /* Optional features */
+        // rotation = <0>;  　   // default:0　(0, 90, 180, 270)
+        // scroll-tick = <10>;  // default:10
+        // snipe-divisor = <2>; // default:2 (configurable via Kconfig)
+        // snipe-layers = <5>;
+        // scroll-layers = <6>;
+        // scroll-horizontal-layers = <7>;
+        // scroll-snipe-layers = <8>
+        // scroll-horizontal-snipe-layers = <9>;
+        // scroll-snipe-divisor = <3>; // default:3 (configurable via Kconfig)
+        // scroll-snipe-tick = <20>;   // default:20 (configurable via Kconfig)
+
+        // Alternative: Use behavior-based switching instead of layers
+        // switch-method = "toggle";   // "layer", "toggle"
+    };
 };
