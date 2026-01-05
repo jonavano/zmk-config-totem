@@ -113,7 +113,7 @@
 
             bindings = <
   &kp Q           &kp W           &kp E               &kp R                  &kp T          &kp Y        &kp U                  &kp I               &kp O           &kp P
-  &ht LEFT_GUI A  &ht LEFT_ALT S  &ht LEFT_CONTROL D  &htShift F LEFT_SHIFT  &kp G          &kp H        &htShift LEFT_SHIFT J  &ht LEFT_CONTROL K  &ht LEFT_ALT L  &ht LEFT_GUI SEMICOLON
+  &ht LEFT_GUI A  &ht LEFT_ALT S  &ht LEFT_CONTROL D  &htShift LEFT_SHIFT F  &kp G          &kp H        &htShift LEFT_SHIFT J  &ht LEFT_CONTROL K  &ht LEFT_ALT L  &ht LEFT_GUI SEMICOLON
   &kp Z           &kp X           &kp C               &kp V                  &kp B          &kp N        &kp M                  &kp COMMA           &kp DOT         &kp FSLH
                                   &key_repeat         &lt 5 TAB              &lt 2 SPACE    &lt 1 ENTER  &none                  &none
             >;
@@ -138,7 +138,7 @@
   &mkp LCLK  &mkp MB4         &mkp MB5                &kp HOME             &kp END       &kp C_PREV         &kp C_PLAY_PAUSE  &kp C_NEXT       &kp PAGE_UP    &kp PRINTSCREEN
   &kp LGUI   &kp LALT         &kp LCTRL               &kp LSHFT            &kp DELETE    &kp LEFT           &kp DOWN          &kp UP           &kp RIGHT      &kp C_MENU
   &trans     &kp LC(PAGE_UP)  &kp LC(W)               &kp LC(PAGE_DOWN)    &trans        &kp C_VOLUME_DOWN  &kp K_MUTE        &kp C_VOLUME_UP  &kp PAGE_DOWN  &trans
-                              &kp LG(LA(LEFT_ARROW))  &lt 2 LA(LG(RIGHT))  &trans        &kp BSPC           &trans            &trans
+                            &trans  &kp LG(LA(LEFT_ARROW))  &lt 2 LA(LG(RIGHT))         &kp BSPC           &trans            &trans
             >;
         };
 
@@ -210,7 +210,7 @@
   &trans     &kp Q   &kp W  &kp E      &trans    &trans  &trans  &trans  &trans  &trans
   &kp LSHFT  &kp A   &kp S  &kp D      &kp R     &trans  &trans  &trans  &trans  &trans
   &trans     &trans  &kp T  &kp X      &kp N     &trans  &trans  &trans  &trans  &to 0
-                     &kp C  &kp SPACE  &trans    &trans  &trans  &trans
+                    &trans &kp C  &kp SPACE     &trans  &trans  &trans
             >;
         };
 
